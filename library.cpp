@@ -14,7 +14,7 @@ using std::getline;
 int conv_s_dialog(){
         string input;
         cout << "Enter xml string (format: <record> <word>apple</word> <meaning>round fruit</meaning> <emphasis>1</emphasis> </record>)" << endl;
-        getline(cin, input);
+        getline(cin >> std::ws, input);
 
         //1const char* input = "<record> <word>apple</word> <meaning>round fruit</meaning> <emphasis>1</emphasis> </record>";   for test const char*
 
@@ -67,7 +67,7 @@ dict conversion_second(string input){                   //string
 int conv_f_dialog(){
         string name; dict item;
         cout << "Enter the name of record\n";
-        getline(cin, name);
+        getline(cin >> std::ws, name);
         cout << "Enter the word (Max len is 20 symbols)" << endl;
         cin.getline(item.word, 20);
         cout << "Enter the meaning" << endl;

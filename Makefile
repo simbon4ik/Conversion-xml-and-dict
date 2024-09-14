@@ -1,7 +1,7 @@
 all: full clean
 
 full: static prog.o libmyfunc.a
-	g++ prog.o -L. -lmyfunc -o prog
+	g++ prog.o -L. -lmyfunc -o prog -g
         
 static: input.o library.o
 	ar rc libmyfunc.a input.o library.o
