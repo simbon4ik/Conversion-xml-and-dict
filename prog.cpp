@@ -1,3 +1,8 @@
+/*! 
+   \file
+   \brief Main file with iteractive menu
+*/
+
 #include <iostream>
 #include "input.h"
 #include "library.h"
@@ -8,6 +13,13 @@ using std::cout;
 using std::string;
 using std::getline;
 
+
+
+/*! 
+    \brief Main function with try catch for exceptions
+    
+    The main idea is do while with status that we take from dialog functions
+*/
 
 int main(){
         try{

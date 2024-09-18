@@ -1,15 +1,26 @@
+/*! 
+   \file
+   \brief Header file with description main functions
+*/
+
 #ifndef LIBRARY_H
 #define LIBRARY_H
 
 using std::string;
 
+/*!
+    \brief Dictionary class
+*/
+
 struct dict
 {
-        char word[20];
-        string meaning;
-        int emphasis;
+        ///word in dictionary
+        char word[20];      
+        /// meaning of word
+        string meaning;     
+        /// emphasis word
+        int emphasis;      
 };
-
 
 int conv_f_dialog();
 string conversion_first(dict item, string name);

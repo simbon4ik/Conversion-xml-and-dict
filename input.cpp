@@ -6,11 +6,24 @@ using namespace std;
 bool tryinput(int& num, int min, int max);
 
 
+/*!
+    \brief Funciton for take int from istream
+*/
+
+
 int getint(int a, int b){
         int res;
         while (!tryinput(res,a,b));
         return res;
 }
+
+
+/*!
+    \brief Support funciton for take int from istream
+
+    This function work with cin and in body this function exceptions has handled
+*/
+
 
 
 bool tryinput(int& num, int min, int max){

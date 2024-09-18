@@ -12,6 +12,13 @@ using std::string;
 using std::getline;
 
 
+/*!
+    \brief Dialog function xml to dict
+    
+    In this function we can conversion xml string to the dictionary type, also we can use different types for input (like string, const char *, const char [] and size_t
+*/
+
+
 int conv_s_dialog(){
         string input;
         cout << "Enter xml string (format: <record> <word>apple</word> <meaning>round fruit</meaning> <emphasis>1</emphasis> </record>)" << endl;\
@@ -29,12 +36,19 @@ int conv_s_dialog(){
         return 0;
 }
 
+/*! 
+    \brief First overload conversion xml to dict (const char*)
+*/
 
 dict conversion_second(const char* input){              //const char*
         string input_mod = input;
         return conversion_second(input_mod);
 }
 
+
+/*! 
+    \brief Second overload conversion xml to dict (const char[] and size_t)
+*/
 
 dict conversion_second(const char* symbols, size_t length){
         char* input = new char[length+1];
@@ -45,6 +59,12 @@ dict conversion_second(const char* symbols, size_t length){
         delete[] input;
         return conversion_second(input_mod);
 }
+
+/*! 
+    \brief Third overload conversion xml to dict (string) and main conversion
+
+    For each area find start index and end + substr
+*/
 
 
 dict conversion_second(string input){                   //string
@@ -65,6 +85,11 @@ dict conversion_second(string input){                   //string
         return result;
 }
 
+/*!
+    \brief Dialog function dict to xml
+    
+    In this function we can conversion dictionary type to xml string
+*/
 
 int conv_f_dialog(){
         string name; dict item;
@@ -81,7 +106,12 @@ int conv_f_dialog(){
         return 0;
 }
 
+/*! 
+    \brief Assembling the result in xml format
 
+    \param name, item.word, item.meaning, item.emphasis are terms
+    \return result in string xml format
+*/
 string conversion_first(dict item, string name){
         string result = '<' + name + '>' + "\n\t<word>" + item.word + "</word>\n\t<meaning>" + item.meaning + "<meaning>\n\t<emphasis>" +std::to_string(item.emphasis) + "</emphasis>\n</"+ name + ">\n";
         return result;
