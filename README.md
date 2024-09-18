@@ -1,5 +1,6 @@
-#xml -> dict
-#dict -> xml
+
+# xml -> dict
+# dict -> xml
 
 This is a small project with a simple interface menu, which is created for convert a record from a dictionary (word, meaning, emphasis) to an xml string format and back.
 
