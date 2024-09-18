@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <cstring>
+#include <limits>
 #include "input.h"
 #include "library.h"
 
@@ -13,8 +14,9 @@ using std::getline;
 
 int conv_s_dialog(){
         string input;
-        cout << "Enter xml string (format: <record> <word>apple</word> <meaning>round fruit</meaning> <emphasis>1</emphasis> </record>)" << endl;
-        getline(cin >> std::ws, input);
+        cout << "Enter xml string (format: <record> <word>apple</word> <meaning>round fruit</meaning> <emphasis>1</emphasis> </record>)" << endl;\
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        getline(cin, input);
 
         //1const char* input = "<record> <word>apple</word> <meaning>round fruit</meaning> <emphasis>1</emphasis> </record>";   for test const char*
 
@@ -66,7 +68,7 @@ dict conversion_second(string input){                   //string
 
 int conv_f_dialog(){
         string name; dict item;
-        cout << "Enter the name of record\n";
+        cout << "Enter the name of record" << endl;
         getline(cin >> std::ws, name);
         cout << "Enter the word (Max len is 20 symbols)" << endl;
         cin.getline(item.word, 20);
