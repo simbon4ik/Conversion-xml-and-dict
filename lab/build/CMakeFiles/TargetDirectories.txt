@@ -1,0 +1,5 @@
+/home/simba/oop2024/1/lab/build/CMakeFiles/input.dir
+/home/simba/oop2024/1/lab/build/CMakeFiles/func.dir
+/home/simba/oop2024/1/lab/build/CMakeFiles/prog.dir
+/home/simba/oop2024/1/lab/build/CMakeFiles/edit_cache.dir
+/home/simba/oop2024/1/lab/build/CMakeFiles/rebuild_cache.dir

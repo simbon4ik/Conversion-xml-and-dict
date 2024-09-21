@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall -Wextra CMakeFiles/prog.dir/prog.cpp.o -o prog  libinput.a libfunc.a 

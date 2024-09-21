@@ -1,0 +1,93 @@
+\hypertarget{library_8h}{}\doxysection{/home/simba/oop2024/1/lab/library.h File Reference}
+\label{library_8h}\index{/home/simba/oop2024/1/lab/library.h@{/home/simba/oop2024/1/lab/library.h}}
+
+
+Header file with description main functions.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{library_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdict}{dict}}
+\begin{DoxyCompactList}\small\item\em Dictionary class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{library_8h_a9e6870716e6457bc005afab73fadbd42}{conv\+\_\+f\+\_\+dialog}} ()
+\begin{DoxyCompactList}\small\item\em Dialog function dict to xml. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{library_8h_af471d8c7cfb3b57480b314d94276d15c}{conversion\+\_\+first}} (\mbox{\hyperlink{structdict}{dict}} item, string name)
+\begin{DoxyCompactList}\small\item\em Assembling the result in xml format. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{library_8h_ac0150285370e644a6e586b2092ec7531}{conv\+\_\+s\+\_\+dialog}} ()
+\begin{DoxyCompactList}\small\item\em Dialog function xml to dict. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdict}{dict}} \mbox{\hyperlink{library_8h_a1fc4cbf75d7576e6d270b90cf370558f}{conversion\+\_\+second}} (string input)
+\begin{DoxyCompactList}\small\item\em Third overload conversion xml to dict (string) and main conversion. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{library_8h_a29fe9779dd59819f3c618a4ffdfa418c}\label{library_8h_a29fe9779dd59819f3c618a4ffdfa418c}} 
+\mbox{\hyperlink{structdict}{dict}} \mbox{\hyperlink{library_8h_a29fe9779dd59819f3c618a4ffdfa418c}{conversion\+\_\+second}} (const char $\ast$input)
+\begin{DoxyCompactList}\small\item\em First overload conversion xml to dict (const char$\ast$) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{library_8h_a79126e868ad702734263a29b5cd3d8d6}\label{library_8h_a79126e868ad702734263a29b5cd3d8d6}} 
+\mbox{\hyperlink{structdict}{dict}} \mbox{\hyperlink{library_8h_a79126e868ad702734263a29b5cd3d8d6}{conversion\+\_\+second}} (const char $\ast$symbols, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Second overload conversion xml to dict (const char\mbox{[}\mbox{]} and size\+\_\+t) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file with description main functions. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{library_8h_a9e6870716e6457bc005afab73fadbd42}\label{library_8h_a9e6870716e6457bc005afab73fadbd42}} 
+\index{library.h@{library.h}!conv\_f\_dialog@{conv\_f\_dialog}}
+\index{conv\_f\_dialog@{conv\_f\_dialog}!library.h@{library.h}}
+\doxysubsubsection{\texorpdfstring{conv\_f\_dialog()}{conv\_f\_dialog()}}
+{\footnotesize\ttfamily int conv\+\_\+f\+\_\+dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dialog function dict to xml. 
+
+In this function we can conversion dictionary type to xml string \mbox{\Hypertarget{library_8h_ac0150285370e644a6e586b2092ec7531}\label{library_8h_ac0150285370e644a6e586b2092ec7531}} 
+\index{library.h@{library.h}!conv\_s\_dialog@{conv\_s\_dialog}}
+\index{conv\_s\_dialog@{conv\_s\_dialog}!library.h@{library.h}}
+\doxysubsubsection{\texorpdfstring{conv\_s\_dialog()}{conv\_s\_dialog()}}
+{\footnotesize\ttfamily int conv\+\_\+s\+\_\+dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Dialog function xml to dict. 
+
+In this function we can conversion xml string to the dictionary type, also we can use different types for input (like string, const char $\ast$, const char \mbox{[}\mbox{]} and size\+\_\+t \mbox{\Hypertarget{library_8h_af471d8c7cfb3b57480b314d94276d15c}\label{library_8h_af471d8c7cfb3b57480b314d94276d15c}} 
+\index{library.h@{library.h}!conversion\_first@{conversion\_first}}
+\index{conversion\_first@{conversion\_first}!library.h@{library.h}}
+\doxysubsubsection{\texorpdfstring{conversion\_first()}{conversion\_first()}}
+{\footnotesize\ttfamily string conversion\+\_\+first (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdict}{dict}}}]{item,  }\item[{string}]{name }\end{DoxyParamCaption})}
+
+
+
+Assembling the result in xml format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name,item.\+word,item.\+meaning,item.\+emphasis} & are terms \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result in string xml format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{library_8h_a1fc4cbf75d7576e6d270b90cf370558f}\label{library_8h_a1fc4cbf75d7576e6d270b90cf370558f}} 
+\index{library.h@{library.h}!conversion\_second@{conversion\_second}}
+\index{conversion\_second@{conversion\_second}!library.h@{library.h}}
+\doxysubsubsection{\texorpdfstring{conversion\_second()}{conversion\_second()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structdict}{dict}} conversion\+\_\+second (\begin{DoxyParamCaption}\item[{string}]{input }\end{DoxyParamCaption})}
+
+
+
+Third overload conversion xml to dict (string) and main conversion. 
+
+For each area find start index and end + substr 
