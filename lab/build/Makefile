@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simba/oop2024/1/lab
+CMAKE_SOURCE_DIR = //home/simba/oop2024/1/lab
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simba/oop2024/1/lab/build
+CMAKE_BINARY_DIR = //home/simba/oop2024/1/lab/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/simba/oop2024/1/lab/build/CMakeFiles /home/simba/oop2024/1/lab/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles //home/simba/oop2024/1/lab/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/simba/oop2024/1/lab/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,32 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named input
-
-# Build rule for target.
-input: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 input
-.PHONY : input
-
-# fast build rule for target.
-input/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/build
-.PHONY : input/fast
-
-#=============================================================================
-# Target rules for targets named func
-
-# Build rule for target.
-func: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 func
-.PHONY : func
-
-# fast build rule for target.
-func/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/build
-.PHONY : func/fast
-
-#=============================================================================
 # Target rules for targets named prog
 
 # Build rule for target.
@@ -155,77 +129,81 @@ prog/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/build
 .PHONY : prog/fast
 
-input.o: input.cpp.o
-.PHONY : input.o
+#=============================================================================
+# Target rules for targets named input
+
+# Build rule for target.
+input: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 input
+.PHONY : input
+
+# fast build rule for target.
+input/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/input.dir/build.make tests/CMakeFiles/input.dir/build
+.PHONY : input/fast
+
+#=============================================================================
+# Target rules for targets named func
+
+# Build rule for target.
+func: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 func
+.PHONY : func
+
+# fast build rule for target.
+func/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func.dir/build.make tests/CMakeFiles/func.dir/build
+.PHONY : func/fast
+
+#=============================================================================
+# Target rules for targets named func_dialog
+
+# Build rule for target.
+func_dialog: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 func_dialog
+.PHONY : func_dialog
+
+# fast build rule for target.
+func_dialog/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func_dialog.dir/build.make tests/CMakeFiles/func_dialog.dir/build
+.PHONY : func_dialog/fast
+
+#=============================================================================
+# Target rules for targets named func_testing
+
+# Build rule for target.
+func_testing: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 func_testing
+.PHONY : func_testing
+
+# fast build rule for target.
+func_testing/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func_testing.dir/build.make tests/CMakeFiles/func_testing.dir/build
+.PHONY : func_testing/fast
+
+files/prog.o: files/prog.cpp.o
+.PHONY : files/prog.o
 
 # target to build an object file
-input.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/input.cpp.o
-.PHONY : input.cpp.o
+files/prog.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/files/prog.cpp.o
+.PHONY : files/prog.cpp.o
 
-input.i: input.cpp.i
-.PHONY : input.i
-
-# target to preprocess a source file
-input.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/input.cpp.i
-.PHONY : input.cpp.i
-
-input.s: input.cpp.s
-.PHONY : input.s
-
-# target to generate assembly for a file
-input.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/input.cpp.s
-.PHONY : input.cpp.s
-
-library.o: library.cpp.o
-.PHONY : library.o
-
-# target to build an object file
-library.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/library.cpp.o
-.PHONY : library.cpp.o
-
-library.i: library.cpp.i
-.PHONY : library.i
+files/prog.i: files/prog.cpp.i
+.PHONY : files/prog.i
 
 # target to preprocess a source file
-library.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/library.cpp.i
-.PHONY : library.cpp.i
+files/prog.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/files/prog.cpp.i
+.PHONY : files/prog.cpp.i
 
-library.s: library.cpp.s
-.PHONY : library.s
-
-# target to generate assembly for a file
-library.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/library.cpp.s
-.PHONY : library.cpp.s
-
-prog.o: prog.cpp.o
-.PHONY : prog.o
-
-# target to build an object file
-prog.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/prog.cpp.o
-.PHONY : prog.cpp.o
-
-prog.i: prog.cpp.i
-.PHONY : prog.i
-
-# target to preprocess a source file
-prog.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/prog.cpp.i
-.PHONY : prog.cpp.i
-
-prog.s: prog.cpp.s
-.PHONY : prog.s
+files/prog.s: files/prog.cpp.s
+.PHONY : files/prog.s
 
 # target to generate assembly for a file
-prog.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/prog.cpp.s
-.PHONY : prog.cpp.s
+files/prog.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/files/prog.cpp.s
+.PHONY : files/prog.cpp.s
 
 # Help Target
 help:
@@ -236,17 +214,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... func"
+	@echo "... func_dialog"
+	@echo "... func_testing"
 	@echo "... input"
 	@echo "... prog"
-	@echo "... input.o"
-	@echo "... input.i"
-	@echo "... input.s"
-	@echo "... library.o"
-	@echo "... library.i"
-	@echo "... library.s"
-	@echo "... prog.o"
-	@echo "... prog.i"
-	@echo "... prog.s"
+	@echo "... files/prog.o"
+	@echo "... files/prog.i"
+	@echo "... files/prog.s"
 .PHONY : help
 
 

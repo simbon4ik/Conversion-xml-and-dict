@@ -4,9 +4,11 @@ project(lab1)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-add_library(input input.h input.cpp)
-add_library(func library.h library.cpp)
+add_compile_options(--coverage)
+add_link_options(--coverage)
 
-add_executable(prog prog.cpp)
+add_subdirectory(tests)
 
-target_link_libraries(prog input func)
+add_executable(prog files/prog.cpp)
+
+target_link_libraries(prog input func_dialog func)

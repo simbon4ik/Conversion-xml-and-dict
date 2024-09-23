@@ -8,13 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/simba/oop2024/1/lab/prog.cpp" "CMakeFiles/prog.dir/prog.cpp.o" "gcc" "CMakeFiles/prog.dir/prog.cpp.o.d"
+  "//home/simba/oop2024/1/lab/files/prog.cpp" "CMakeFiles/prog.dir/files/prog.cpp.o" "gcc" "CMakeFiles/prog.dir/files/prog.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/simba/oop2024/1/lab/build/CMakeFiles/input.dir/DependInfo.cmake"
-  "/home/simba/oop2024/1/lab/build/CMakeFiles/func.dir/DependInfo.cmake"
+  "//home/simba/oop2024/1/lab/build/tests/CMakeFiles/input.dir/DependInfo.cmake"
+  "//home/simba/oop2024/1/lab/build/tests/CMakeFiles/func_dialog.dir/DependInfo.cmake"
+  "//home/simba/oop2024/1/lab/build/tests/CMakeFiles/func.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

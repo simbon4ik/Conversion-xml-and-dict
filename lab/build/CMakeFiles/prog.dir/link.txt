@@ -1,1 +1,1 @@
-/usr/bin/c++  -Wall -Wextra CMakeFiles/prog.dir/prog.cpp.o -o prog  libinput.a libfunc.a 
+/usr/bin/c++  -Wall -Wextra --coverage CMakeFiles/prog.dir/files/prog.cpp.o -o prog  tests/libinput.a tests/libfunc_dialog.a tests/libfunc.a 

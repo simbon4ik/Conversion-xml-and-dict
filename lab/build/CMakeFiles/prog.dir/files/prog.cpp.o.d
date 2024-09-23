@@ -1,5 +1,6 @@
-CMakeFiles/input.dir/input.cpp.o: /home/simba/oop2024/1/lab/input.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
+CMakeFiles/prog.dir/files/prog.cpp.o: \
+ //home/simba/oop2024/1/lab/files/prog.cpp /usr/include/stdc-predef.h \
+ /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -154,4 +155,6 @@ CMakeFiles/input.dir/input.cpp.o: /home/simba/oop2024/1/lab/input.cpp \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/limits
+ /usr/include/c++/11/bits/istream.tcc \
+ //home/simba/oop2024/1/lab/files/input.h \
+ //home/simba/oop2024/1/lab/files/library_dialog.h

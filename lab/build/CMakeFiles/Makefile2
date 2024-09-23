@@ -54,98 +54,66 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/simba/oop2024/1/lab
+CMAKE_SOURCE_DIR = //home/simba/oop2024/1/lab
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/simba/oop2024/1/lab/build
+CMAKE_BINARY_DIR = //home/simba/oop2024/1/lab/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/input.dir/all
-all: CMakeFiles/func.dir/all
 all: CMakeFiles/prog.dir/all
+all: tests/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: tests/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/input.dir/clean
-clean: CMakeFiles/func.dir/clean
 clean: CMakeFiles/prog.dir/clean
+clean: tests/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/input.dir
+# Directory level rules for directory tests
 
-# All Build rule for target.
-CMakeFiles/input.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/simba/oop2024/1/lab/build/CMakeFiles --progress-num=3,4 "Built target input"
-.PHONY : CMakeFiles/input.dir/all
+# Recursive "all" directory target.
+tests/all: tests/CMakeFiles/input.dir/all
+tests/all: tests/CMakeFiles/func.dir/all
+tests/all: tests/CMakeFiles/func_dialog.dir/all
+tests/all: tests/CMakeFiles/func_testing.dir/all
+.PHONY : tests/all
 
-# Build rule for subdir invocation for target.
-CMakeFiles/input.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/simba/oop2024/1/lab/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/input.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/simba/oop2024/1/lab/build/CMakeFiles 0
-.PHONY : CMakeFiles/input.dir/rule
+# Recursive "preinstall" directory target.
+tests/preinstall:
+.PHONY : tests/preinstall
 
-# Convenience name for target.
-input: CMakeFiles/input.dir/rule
-.PHONY : input
-
-# clean rule for target.
-CMakeFiles/input.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/input.dir/build.make CMakeFiles/input.dir/clean
-.PHONY : CMakeFiles/input.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/func.dir
-
-# All Build rule for target.
-CMakeFiles/func.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/simba/oop2024/1/lab/build/CMakeFiles --progress-num=1,2 "Built target func"
-.PHONY : CMakeFiles/func.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/func.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/simba/oop2024/1/lab/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/func.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/simba/oop2024/1/lab/build/CMakeFiles 0
-.PHONY : CMakeFiles/func.dir/rule
-
-# Convenience name for target.
-func: CMakeFiles/func.dir/rule
-.PHONY : func
-
-# clean rule for target.
-CMakeFiles/func.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/clean
-.PHONY : CMakeFiles/func.dir/clean
+# Recursive "clean" directory target.
+tests/clean: tests/CMakeFiles/input.dir/clean
+tests/clean: tests/CMakeFiles/func.dir/clean
+tests/clean: tests/CMakeFiles/func_dialog.dir/clean
+tests/clean: tests/CMakeFiles/func_testing.dir/clean
+.PHONY : tests/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/prog.dir
 
 # All Build rule for target.
-CMakeFiles/prog.dir/all: CMakeFiles/func.dir/all
-CMakeFiles/prog.dir/all: CMakeFiles/input.dir/all
+CMakeFiles/prog.dir/all: tests/CMakeFiles/input.dir/all
+CMakeFiles/prog.dir/all: tests/CMakeFiles/func.dir/all
+CMakeFiles/prog.dir/all: tests/CMakeFiles/func_dialog.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/simba/oop2024/1/lab/build/CMakeFiles --progress-num=5,6 "Built target prog"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/simba/oop2024/1/lab/build/CMakeFiles --progress-num=9,10 "Built target prog"
 .PHONY : CMakeFiles/prog.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/prog.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/simba/oop2024/1/lab/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/prog.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/simba/oop2024/1/lab/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 0
 .PHONY : CMakeFiles/prog.dir/rule
 
 # Convenience name for target.
@@ -156,6 +124,110 @@ prog: CMakeFiles/prog.dir/rule
 CMakeFiles/prog.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/clean
 .PHONY : CMakeFiles/prog.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/input.dir
+
+# All Build rule for target.
+tests/CMakeFiles/input.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/input.dir/build.make tests/CMakeFiles/input.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/input.dir/build.make tests/CMakeFiles/input.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/simba/oop2024/1/lab/build/CMakeFiles --progress-num=7,8 "Built target input"
+.PHONY : tests/CMakeFiles/input.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/input.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/input.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/input.dir/rule
+
+# Convenience name for target.
+input: tests/CMakeFiles/input.dir/rule
+.PHONY : input
+
+# clean rule for target.
+tests/CMakeFiles/input.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/input.dir/build.make tests/CMakeFiles/input.dir/clean
+.PHONY : tests/CMakeFiles/input.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/func.dir
+
+# All Build rule for target.
+tests/CMakeFiles/func.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func.dir/build.make tests/CMakeFiles/func.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func.dir/build.make tests/CMakeFiles/func.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/simba/oop2024/1/lab/build/CMakeFiles --progress-num=1,2 "Built target func"
+.PHONY : tests/CMakeFiles/func.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/func.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/func.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/func.dir/rule
+
+# Convenience name for target.
+func: tests/CMakeFiles/func.dir/rule
+.PHONY : func
+
+# clean rule for target.
+tests/CMakeFiles/func.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func.dir/build.make tests/CMakeFiles/func.dir/clean
+.PHONY : tests/CMakeFiles/func.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/func_dialog.dir
+
+# All Build rule for target.
+tests/CMakeFiles/func_dialog.dir/all:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func_dialog.dir/build.make tests/CMakeFiles/func_dialog.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func_dialog.dir/build.make tests/CMakeFiles/func_dialog.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/simba/oop2024/1/lab/build/CMakeFiles --progress-num=3,4 "Built target func_dialog"
+.PHONY : tests/CMakeFiles/func_dialog.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/func_dialog.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/func_dialog.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/func_dialog.dir/rule
+
+# Convenience name for target.
+func_dialog: tests/CMakeFiles/func_dialog.dir/rule
+.PHONY : func_dialog
+
+# clean rule for target.
+tests/CMakeFiles/func_dialog.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func_dialog.dir/build.make tests/CMakeFiles/func_dialog.dir/clean
+.PHONY : tests/CMakeFiles/func_dialog.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/func_testing.dir
+
+# All Build rule for target.
+tests/CMakeFiles/func_testing.dir/all: tests/CMakeFiles/func.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func_testing.dir/build.make tests/CMakeFiles/func_testing.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func_testing.dir/build.make tests/CMakeFiles/func_testing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=//home/simba/oop2024/1/lab/build/CMakeFiles --progress-num=5,6 "Built target func_testing"
+.PHONY : tests/CMakeFiles/func_testing.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/func_testing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/func_testing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start //home/simba/oop2024/1/lab/build/CMakeFiles 0
+.PHONY : tests/CMakeFiles/func_testing.dir/rule
+
+# Convenience name for target.
+func_testing: tests/CMakeFiles/func_testing.dir/rule
+.PHONY : func_testing
+
+# clean rule for target.
+tests/CMakeFiles/func_testing.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/func_testing.dir/build.make tests/CMakeFiles/func_testing.dir/clean
+.PHONY : tests/CMakeFiles/func_testing.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

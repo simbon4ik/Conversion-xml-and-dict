@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include "input.h"
-#include "library.h"
+#include "library_dialog.h"
 
 using std::cin;
 using std::endl;
